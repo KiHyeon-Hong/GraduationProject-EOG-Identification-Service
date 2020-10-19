@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en" style="
+background-color: rgb(248,248,252);
+">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Tool</title>
+
+    <!-- Custom fonts for this template-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
+  <link
+    href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+    rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="/css/sb-admin-2.min.css" rel="stylesheet">
+
+    <link href="/css/chinsung_graph.css" rel="stylesheet">
+
+
+  <script src="/vendor/jquery/jquery.min.js"></script>
+
+  <style>
+    p {
+      margin: 0px;
+    }
+
+    #page-top > div:nth-child(4) > div > div > div.card-body > div {
+      margin-bottom: 30px;
+    }
+  </style>
+</head>
+
+<body id="page-top" style="height: 700px; 
+background-color: rgb(248,248,252);
+">
+    <!-- <h2> 이것은 실시간 분석 미리보기입니다. 다섯번째버전</h2> -->
+    <div class="divider-custom divider-light" style="
+    margin-top: 15px;
+    margin-left: 15px;
+">
+        <a href="/web/main/index">
+        <div class="divider-custom-icon">
+          <i class="fas fa-star"></i>
+        </div>
+      </a>
+      </div>
+    <div class="row">
+        <button onclick="openTextFile()">Open</button>
+        <input type="hidden" name="dataSet" id='output' value="">
+    
+        </input>
+
+    </div>
+
+
+    <div id="selectBox" class="row">
+            <div class="row">
+                    height<input type="number"  id='canvasHeight' value="200"/> 
+                    width<input type="number" id='canvasWidth' value="1200"/> 
+                    interval_second<input type="number" id='intervalSecond' value="30"/>
+            </div>
+            <div class="row">
+                    <!-- sub = <input type="number" id='bp0' value="0"/> - <input type="number" id='bp1' value="2" /> // 0:델타 1:세타 2:알파 3:베타 4:감마 -->
+            </div>
+            <div class="row">
+                    <!-- <input type="checkbox" name="chk_option[]" value="trim"/>비율 증폭
+                    <input type="checkbox" name="chk_option[]" value="subGamma"/>-GAMMA -->
+            </div>
+            <div class="row">
+                    <div class="col-lg-1 mb-4" style="background-color: rgba(0, 0, 0,1);" onclick="cardClick(0)">test</div>
+                    <!-- <div class="col-lg-1 mb-4" style="background-color: rgba(0, 0, 0, 0.8);" >sub 결과보기</div>
+                    <div class="col-lg-1 mb-4" style="background-color: rgba(0, 0, 0, 0.6);" >델타의 비율보기</div> -->
+                
+                    <div class="col-lg-1 mb-4" style="background-color: rgba(133, 152, 194, 1);">delta</div>
+                    <div class="col-lg-1 mb-4" style="background-color: rgba(174, 145, 184, 1);">theta</div>
+                    <div class="col-lg-1 mb-4" style="background-color: rgba(130, 167, 153, 1);">alpha</div>
+                    <div class="col-lg-1 mb-4" style="background-color: rgba(231, 206, 109, 1);">beta</div>
+                    <div class="col-lg-1 mb-4" style="background-color: rgba(233, 134, 127, 1);">gamma</div>
+            </div>
+
+            <div class="row" id="helpMsg">
+                   <!-- <input type="checkbox" name="chkbox[]" onclick="chkBox(this)"> -->
+            </div>
+
+    </div>
+
+    <div class="row" style="min-height: 10%;">
+
+        <!-- Area Chart -->
+        <div class="col-xl-8 col-lg-7">
+            <div class="card shadow mb-4" >
+                <!-- Card Header - Dropdown -->
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between"
+                    style="min-height: 100%;">
+                    <h6 id="chartName" lass="m-0 font-weight-bold text-primary">chartName</h6>
+                </div>
+                <!-- Card Body -->
+                <div class="card-body" style="overflow: auto;">
+                    <div id="myAreaChartBox" class="chart-area" style="width: 1900px;">
+                        <canvas id="myAreaChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div id="output2">
+
+            output2
+
+        </div>
+    </div>
+
+<!-- Bootstrap core JavaScript-->
+<script src="/vendor/jquery/jquery.min.js"></script>
+<script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<!-- Core plugin JavaScript-->
+<script src="/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+<!-- Custom scripts for all pages-->
+<script src="/js/sb-admin-2.min.js"></script>
+
+<!-- Page level plugins -->
+<script src="/vendor/chart.js/Chart.min.js"></script>
+
+<!-- Page level custom scripts -->
+
+
+<script src="/js/chinsung_graph_wrapper.js"></script>
+</body>
+</html>

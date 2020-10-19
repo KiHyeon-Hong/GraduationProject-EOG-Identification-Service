@@ -1,0 +1,24 @@
+{
+  "name": "refactor-gp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "set NODE_ENV=skip_ganglion&& node src/app.js",
+    "prettier": "npx prettier --write ./src/web/**/*.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.4",
+    "ejs": "^2.7.1",
+    "express": "^4.17.1",
+    "express-session": "^1.16.2",
+    "http": "0.0.0",
+    "mysql": "^2.17.1",
+    "request": "^2.88.0",
+    "http-errors": "^1.8.0",
+    "sync-mysql": "^3.0.1"
+  }
+}
